@@ -73,10 +73,6 @@ pipeline {
                             echo "Executing Apply on ${params.ENVIRONMENT}..."
                             sh "terraform apply --auto-approve -var-file=envs/${params.ENVIRONMENT}.tfvars"
                             break
-                        case 'destroy':
-                            echo "Executing Destroy on ${params.ENVIRONMENT}..."
-                            sh "terraform destroy --auto-approve -var-file=envs/${params.ENVIRONMENT}.tfvars"
-                            break
                         default:
                             error 'Unknown action'
                     }

@@ -8,7 +8,7 @@ pipeline {
         )
         choice(
             name: 'ACTION',
-            choices: ['plan', 'apply', 'destroy'],
+            choices: ['plan', 'apply'],
             description: 'Select the action to perform'
         )
         string(
@@ -59,7 +59,7 @@ pipeline {
         stage('Action') {
             steps {
                 script {
-                    if (params.ENVIRONMENT == 'prod' && params.ACTION in ['apply', 'destroy']) {
+                    if (params.ENVIRONMENT == 'prod' && params.ACTION in ['apply']) {
                         input message: "⚠️ You are about to ${params.ACTION.toUpperCase()} PRODUCTION. Are you sure?",
                               ok: 'Yes, proceed'
                     }

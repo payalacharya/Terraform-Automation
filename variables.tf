@@ -8,10 +8,10 @@ variable "key_name" {
     default     =  "NewKey1" 
 }
 
-variable "instance_type" { 
-    description = "instance type for ec2" 
-    default     =  "m7i-flex.large" 
-}
+# variable "instance_type" { 
+#     description = "instance type for ec2" 
+#     default     =  "m7i-flex.large" 
+# }
 
 variable "security_group" { 
     description = "Name of security group" 

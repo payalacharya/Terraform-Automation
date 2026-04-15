@@ -45,7 +45,7 @@ resource "aws_security_group" "jenkins-sg-2022" {
 resource "aws_instance" "myFirstInstance" {
   ami           = var.ami_id
   key_name = var.key_name
-  instance_type = var.instance_type
+  instance_type = "m7i-flex.large" 
   vpc_security_group_ids = [aws_security_group.jenkins-sg-2022.id]
 
   # Set root volume size to 20 GB

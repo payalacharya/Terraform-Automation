@@ -1,3 +1,3 @@
 environment = "dev"
-instance_type = var.instance_type
+instance_type = "t3.micro"
 region        = "us-east-1"

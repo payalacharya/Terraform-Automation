@@ -1,3 +1,3 @@
 environment   = "prod"
-instance_type = var.instance_type
+instance_type = "c7i-flex.large"
 region        = "us-east-1"
